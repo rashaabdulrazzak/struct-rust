@@ -55,7 +55,7 @@ fn main() {
     let blue = Color(0, 0, 0255);
 
     // get a specific value from tuple stuct
-    println!("value is {} ", blue.2)
+    println!("value is {} ", blue.2);
 }
 
 fn build_user(email: String, username: String) -> User {

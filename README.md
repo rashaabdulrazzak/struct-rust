@@ -32,12 +32,28 @@ active: bool,
 ```
  struct Color(i32, i32, i32);
 fn main() {
-    let black = Color(0, 0, 0);
+    let blue = Color(0, 0, 255);
 
 }
 ```
 
-we can access its individual value using `.` followed by the index
+we can access its individual value using `.` followed by the index example:
+
+```
+ println!("value is {} ", blue.2);
+
+```
+
+3. Unit-Like Structs which does not contain any field
+   Unit-like structs can be useful when you need to implement a trait on some type but don’t have any data that you want to store in the type itself. Example
+
+```
+   struct AlwaysEqual;
+
+   fn main() {
+        let subject = AlwaysEqual;
+  }
+```
 
 ##### How to use the Struct?
 
