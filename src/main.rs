@@ -39,6 +39,14 @@ fn main() {
     // create instance using build_user function
     let user3 = build_user(String::from("user3@gmail.com"), String::from("user3"));
     println!("user info is {:#?} ", user3);
+
+    // create instance using struct update syntax
+    let user4 = User {
+        email: String::from("user4@gmail.com"),
+        username: String::from("user4"),
+        ..user1
+    };
+    println!("user info is {:#?} ", user4);
 }
 
 fn build_user(email: String, username: String) -> User {

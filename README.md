@@ -67,11 +67,30 @@ let user3 = build_user(String::from("user3@gmail.com"), String::from("user3"));
 
 ```
 
-3. Use an exsiting instance to create a new one
+3. Use an exsiting instance to create a new one : called struct update syntax
+   It’s often useful to create a new instance of a struct that includes most of the values from another instance, but changes some. You can do this using struct update syntax.
 
 ```
-
+fn main() {
+    // create an instance of struct user
+    let user1 = User {
+        email: String::from("user1@gmail.com"),
+        username: String::from("user1"),
+        active: true,
+        sign_in_count: 1,
+    };
+    // create instance using struct update syntax
+    let user4 = User {
+        email: String::from("user4@gmail.com"),
+        username: String::from("user4"),
+        ..user1
+    };
+    println!("user info is {:#?} ", user4);
+}
 ```
+
+**Note**
+It is important to realize that if we create a new instance with struct update method but we let the new one take the username or email from the user1 then we won't be able to use user1 after that declartion.because the String in the username field of user1 was moved into user2. as the string is not copy trait
 
 ##### How to get a specific value from a Struct
 
