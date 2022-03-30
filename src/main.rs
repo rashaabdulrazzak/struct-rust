@@ -6,6 +6,9 @@ struct User {
     sign_in_count: u64,
     active: bool,
 }
+
+// define tuple struct
+struct Color(i32, i32, i32);
 fn main() {
     // create an instance of struct user
     let user1 = User {
@@ -47,6 +50,12 @@ fn main() {
         ..user1
     };
     println!("user info is {:#?} ", user4);
+
+    // create instance of tuple struct
+    let blue = Color(0, 0, 0255);
+
+    // get a specific value from tuple stuct
+    println!("value is {} ", blue.2)
 }
 
 fn build_user(email: String, username: String) -> User {
