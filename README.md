@@ -1,6 +1,6 @@
 # Struct in Rust
 
-##### What are Struct?
+##### What is Struct?
 
 it is a custom datatype to group related data together and name that data in a meaningful way.
 
