@@ -35,4 +35,17 @@ fn main() {
 
     // display the value of active after change
     println!("value is {} ", user2.active);
+
+    // create instance using build_user function
+    let user3 = build_user(String::from("user3@gmail.com"), String::from("user3"));
+    println!("user info is {:#?} ", user3);
+}
+
+fn build_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
 }

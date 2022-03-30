@@ -48,6 +48,22 @@ fn main() {
 2. Use a function to create the instance of struct
 
 ```
+fn build_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+
+```
+
+this function takes the email and username as parameter and assign the other value to the default value of the srtuct user.
+To create an instance using the above function we write:
+
+```
+let user3 = build_user(String::from("user3@gmail.com"), String::from("user3"));
 
 ```
 
@@ -64,8 +80,8 @@ example if we want the username of user1 we can type `user1.username`
 
 ##### How we change a specific value in a Struct
 
-if the struct instance is defined as mut variable we can change the specific value from the Struct using the dot notation also.
-in the following example we will create a new instance of the user struct and we will make it mutable :
+if the struct instance is defined as **mut** variable we can change the specific field value from the Struct using the dot notation. Always remember Rust doesn’t allow us to mark only certain fields as mutable.
+In the following example we will create a new instance of the user struct and we will make it mutable :
 
 ```
 fn main() {
